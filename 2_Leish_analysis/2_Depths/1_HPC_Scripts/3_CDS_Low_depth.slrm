@@ -1,0 +1,49 @@
+#!/bin/bash
+
+#SBATCH --account=CREDIT_ACCOUNT
+#SBATCH --job-name=CDS_violinplots
+#SBATCH --partition=PARTITION_NAME
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -t 02:00:00
+#SBATCH -o slurm-%j.out.file
+#SBATCH -e slurm-%j.err.file
+#SBATCH --mail-type=BEGIN
+#SBATCH --mail-type=END
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=mailto@me.be
+
+###  RE-Setting the environment:
+module --force purge
+module load HPC/2020a
+## loading my modules:
+module load atools
+module load BioTools/2020a.00-intel-2020a
+module load Python
+
+SECONDS=0
+
+##################################################################################################
+### Extracting regions in the CDS region of the genome with low read depth, on a per sample level
+##################################################################################################
+### Change directory to where the median depth files are located:
+cd /PATH/TO/MEDIAN_DEPTHS/
+
+### Run script
+python /PATH/TO/SCRIPT/CDS_Low_depth.py /PATH/TO/MEDIAN_DEPTHS/ /PATH/TO/MEDIAN_DEPTHS/
+
+
+##################################################################
+### Extracting good CDS regions (>=10X Coverage) across the genome
+##################################################################
+
+### Create new BED file by excluding the regions with low (<10X) median depths - present in low_median_cds.txt (output from previous script)
+grep -v -wf low_median_cds.txt /PATH/TO/REFERENCE/TriTrypDB-65_LbraziliensisMHOMBR75M2904_2019.ScaffOut.gtf.bed > good_CDS_Regions_min10X_InAllSamples.bed
+
+
+
+
+ELAPSED="Total elapsed time: $(($SECONDS / 3600))hrs $((($SECONDS / 60) % 60))min $(($SECONDS % 60))sec"
+echo -e "\n$ELAPSED"
+
+### EOF ----------------------------------------------------------------------------------------------

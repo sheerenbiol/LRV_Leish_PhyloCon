@@ -1,0 +1,6 @@
+Fasta concatenation --> Done with SeqKit concat
+
+EXAMPLE: 
+$ seqkit concat ../2_NH/NH_Aln.fasta ../3_PEIF2AS/PEIF2AS_Aln.fasta ../4_PSS1/PSS1_Aln.fasta ../5_PTIFAS/PTIFAS_Aln.fasta ../6_RPII/RPII_Aln.fasta ../7_ZBDH/ZBDH_Aln.fasta | tee OW-NW_Concat_genes.fa
+
+

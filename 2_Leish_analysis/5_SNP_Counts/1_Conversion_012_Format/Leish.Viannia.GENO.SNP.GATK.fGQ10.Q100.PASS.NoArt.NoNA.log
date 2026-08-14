@@ -1,0 +1,15 @@
+
+VCFtools - v0.1.13
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--gzvcf Leish.Viannia.GENO.SNP.GATK.fGQ10.Q100.PASS.NoArt.NoNA.vcf.gz
+	--012
+	--out Leish.Viannia.GENO.SNP.GATK.fGQ10.Q100.PASS.NoArt.NoNA
+
+Using zlib version: 1.2.11
+After filtering, kept 84 out of 84 Individuals
+Writing 012 matrix files ... 	012: Only outputting biallelic loci.
+Done.
+After filtering, kept 162031 out of a possible 162031 Sites
+Run Time = 6.00 seconds

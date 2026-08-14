@@ -1,0 +1,17 @@
+Core-SNP-filter
+command:  ~/Documents/Programs/coresnpfilter -e 
+Leish.Viannia.GENO.SNP.GATK.fGQ10.Q100.PASS.Noart.NoNA.vcf.gz.fa > 
+Leish.Viannia.GENO.SNP.GATK.fGQ10.Q100.PASS.Noart.NoNA.vcf.gz.filtered.fa 
+─────────────────────────────────────────── input file: 
+Leish.Viannia.GENO.SNP.GATK.fGQ10.Q100.PASS.Noart.NoNA.vcf.gz.fa
+number of sequences:                     63
+input sequence length:               142944
+├ output sequence length:             97530
+└ total sites removed:                45414
+  ├ non-core sites removed:               0
+  └ invariant sites removed:          45414
+    ├ invariant-A sites removed:       4455
+    ├ invariant-C sites removed:      18179
+    ├ invariant-G sites removed:      18268
+    ├ invariant-T sites removed:       4512
+    └ other invariant sites removed:      0

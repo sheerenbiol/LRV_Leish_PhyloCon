@@ -1,0 +1,66 @@
+#!/bin/bash
+
+#SBATCH --account=CREDIT_ACCOUNT
+#SBATCH --job-name=atools_depth2cnv
+#SBATCH --partition=PARTITION_NAME
+#SBATCH -N 1
+#SBATCH -n 4
+#SBATCH -t 00:20:00
+#SBATCH -o slurm-%j.out.file
+#SBATCH -e slurm-%j.err.file
+#SBATCH --mail-type=BEGIN
+#SBATCH --mail-type=END
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=mailto@me.be
+
+###  RE-Setting the environment:
+module --force purge
+module load HPC/2020a
+module load Python
+## loading my modules:
+module load atools
+module load BioTools/2020a.00-intel-2020a
+
+SECONDS=0
+
+###############################################
+### atools environment -- array job per sample
+###############################################
+## Start logging:
+alog --state start
+source <(aenv --data $2 --no_sniffer)
+
+#############################
+### Calculating median depths
+#############################
+### Create new directory for output files:
+mkdir -p /PATH/TO/MEDIAN_DEPTHS
+cd /PATH/TO/MEDIAN_DEPTHS
+
+### Specify the path of the .bed file
+BED=/PATH/TO/REFERENCE/TriTrypDB-65_LbraziliensisMHOMBR75M2904_2019.ScaffOut.gtf.bed
+
+### Get input directory from the first command line argument (after the script name)
+input_dir=$1
+echo '$input_dir'
+
+### Get sample id
+sample_id=$(echo "$IN" | cut -d. -f1)
+echo 'sample_id'
+echo '$IN'
+echo '$BED'
+
+### Run script:
+python /PATH/TO/SCRIPT/depth2cnv_mediandepth_unzipped.py $input_dir/${IN}.sort.md.depths $BED $sample_id
+
+
+### AFTER THIS, Proceed with 2_Low_Depths.slrm to create list of samples with low depths which will be required to exclude from downstream analyses.
+
+
+## End logging of atools:
+alog --state end  --exit $?
+
+ELAPSED="Total elapsed time: $(($SECONDS / 3600))hrs $((($SECONDS / 60) % 60))min $(($SECONDS % 60))sec"
+echo -e "\n$ELAPSED"
+
+### EOF ----------------------------------------------------------------------------------------------

@@ -1,0 +1,28 @@
+{
+    "adapter_fasta": "/PATH/TO/FOLDER/ViralGenie/primers.fna",
+    "host_k2_db": "/PATH/TO/DATABASE/kraken2/k2_own_host_contamination",
+    "host_k2_library": "added",
+    "skip_complexity_filtering": true,
+
+    "skip_read_classification": false,
+    "save_databases": false,
+    "kraken2_db": "/PATH/TO/DATABASE/kraken2/kraken2_viral_C-RVDBv26_15-09-2023",
+    "assemblers": "megahit,spades",
+    "reference_pool": "/PATH/TO/DATABASE/LRV1_74refs.fasta",
+
+    "iterative_refinement_cycles": 2,
+    "variant_caller": "bcftools",
+    "consensus_caller": "ivar",
+    "intermediate_variant_caller": "bcftools",
+    "intermediate_consensus_caller": "ivar",
+    "identity_threshold": 0.6,
+    "cluster_method": "mmseqs-cluster",
+    "network_clustering": "connected_components",
+    "min_contig_size": 500,
+    "skip_hybrid_consensus": true,
+    "skip_singleton_filtering": false,
+
+    "save_intermediate_polishing": false,
+    "intermediate_mapping_stats": false,
+    "keep_unclassified": false
+}

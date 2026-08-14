@@ -1,0 +1,41 @@
+#!/bin/bash
+
+#SBATCH --account=CREDIT_ACCOUNT
+#SBATCH --job-name=MedianDP10
+#SBATCH --partition=PARTITION_NAME
+#SBATCH -N 1
+#SBATCH -n 4
+#SBATCH -t 00:20:00
+#SBATCH -o slurm-%j.out.file
+#SBATCH -e slurm-%j.err.file
+#SBATCH --mail-type=BEGIN
+#SBATCH --mail-type=END
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=mailto@me.be
+
+###  RE-Setting the environment:
+module --force purge
+module load HPC/2020a
+module load Python
+## loading my modules:
+module load BioTools/2020a.00-intel-2020a
+
+###########################################################
+### Identify sample with low median CDS read depth (< 10X)
+###########################################################
+
+### Change to directory with median depth files
+cd /PATH/TO/MEDIAN_DEPTHS
+
+### Set variable
+input_dir=/PATH/TO/MEDIAN_DEPTHS
+echo '$input_dir'
+
+### Run python script:
+python /PATH/TO/SCRIPT/genomeMedianDepth.py $input_dir Samples_to_exclude.list
+
+
+### Create new Sample list for downstream analysis, by excluding the samples identified in this step
+grep -v -F -f Samples_to_exclude.list /PATH/TO/Sample_List.csv > Updated_Sample_List.csv
+
+### EOF ----------------------------------------------------------------------------------------------

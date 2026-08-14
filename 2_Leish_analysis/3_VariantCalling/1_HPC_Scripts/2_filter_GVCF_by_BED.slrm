@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+
+#SBATCH --account=CREDIT_ACCOUNT
+#SBATCH --ntasks=1 --cpus-per-task=1
+#SBATCH --mem-per-cpu=30g
+#SBATCH --time=00:05:00
+#SBATCH -o slurm-%j.out.file
+#SBATCH -e slurm-%j.err.file
+#SBATCH --mail-type=BEGIN
+#SBATCH --mail-type=END
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=mailto@me.be
+
+###  RE-Setting the environment:
+module --force purge
+module load HPC/2020a
+## loading my modules:
+module load atools
+module load BioTools/2020a.00-intel-2020a
+
+
+###############################################
+### atools environment -- array job per sample
+###############################################
+## Start logging:
+alog --state start
+
+source <(aenv --data /PATH/TO/Updated_Sample_List.csv --no_sniffer)
+
+
+#####################################################################
+### Filter GVCF files by BED files with sufficiently high read depths
+#####################################################################
+### Create new directory for filtered g.vcf files:
+mkdir -p /PATH/TO/GVCFS/FILTERED_GVCFS
+cd /PATH/TO/GVCFS/FILTERED_GVCFS
+
+### Filter g.vcf files
+bcftools view -R /PATH/TO/good_CDS_Regions_min10X_InAllSamples.bed -Oz -o ${IN}.BEDfiltered.g.vcf.gz /PATH/TO/GVCFS/${IN}.g.vcf.gz
+
+
+### AFTER THIS, PROCEED WITH JOINING GVCF FILES --> Leish_Var_Calling_2_join_gvcfs_sbatch_atools.sh
+
+
+## End logging:
+alog --state end  --exit $?
+
+### EOF ----------------------------------------------------------------------------------------------

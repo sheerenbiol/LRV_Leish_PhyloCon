@@ -1,0 +1,223 @@
+IQ-TREE multicore version 2.3.6 for Linux x86 64-bit built Aug  1 2024
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor, Heiko Schmidt,
+Dominik Schrempf, Michael Woodhams, Ly Trong Nhan, Thomas Wong
+
+Host:    r4c02cn2.vaughan (AVX2, FMA3, 251 GB RAM)
+Command: /scratch/antwerpen/207/vsc20717/Software/iqtree-2.3.6-Linux-intel/bin/iqtree2 -B 10000 -m TVM+F+R2+ASC -seed 42 -s /scratch/antwerpen/207/vsc20717/LRV_Leish_CoDiv/1_GenData/2_Leish/1_OW_NW/3_Gene_trees/1_input/Leish.Viannia.GENO.SNP.GATK.fGQ10.Q100.PASS.Noart.NoNA.vcf.gz.filtered.fa
+Seed:    42 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Jul  4 10:27:42 2025
+Kernel:  AVX+FMA - 1 threads (32 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 32 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file /scratch/antwerpen/207/vsc20717/LRV_Leish_CoDiv/1_GenData/2_Leish/1_OW_NW/3_Gene_trees/1_input/Leish.Viannia.GENO.SNP.GATK.fGQ10.Q100.PASS.Noart.NoNA.vcf.gz.filtered.fa ... Fasta format detected
+Reading fasta file: done in 0.196893 secs using 45.36% CPU
+Alignment most likely contains DNA/RNA sequences
+Alignment has 63 sequences with 97530 columns, 14486 distinct patterns
+77176 parsimony-informative, 20354 singleton sites, 0 constant sites
+          Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.00299778 secs using 67.32% CPU
+   1  012-2023    0.00%    failed      0.00%
+   2  013-2023    0.00%    failed      0.00%
+   3  018-2023    0.00%    failed      0.00%
+   4  CUM24       0.00%    failed      0.00%
+   5  CUM41       0.00%    failed      0.00%
+   6  CUM65       0.00%    failed      0.00%
+   7  CUM68       0.00%    passed     30.00%
+   8  IOCL1105    0.00%    passed     89.83%
+   9  IOCL2371    0.00%    failed      0.82%
+  10  IOCL2391    0.00%    passed     44.48%
+  11  IOCL2407    0.00%    passed     24.16%
+  12  IOCL2495    0.00%    failed      0.00%
+  13  IOCL2499    0.00%    failed      0.00%
+  14  IOCL2957    0.00%    failed      0.36%
+  15  IOCL3305    0.00%    passed      8.72%
+  16  IOCL3357    0.00%    passed     78.99%
+  17  IOCL3371    0.00%    passed     33.59%
+  18  IOCL3461    0.00%    passed     75.89%
+  19  IOCL3466    0.00%    failed      2.99%
+  20  IOCL3473    0.00%    failed      0.00%
+  21  IOCL3486    0.00%    passed     92.23%
+  22  IOCL3503    0.00%    passed     22.83%
+  23  IOCL3515    0.01%    failed      0.00%
+  24  IOCL3516    0.01%    failed      0.00%
+  25  IOCL3519    0.02%    failed      0.00%
+  26  IOCL3520    0.03%    failed      0.00%
+  27  IOCL3540    0.00%    failed      0.00%
+  28  IOCL3542    0.00%    passed     12.67%
+  29  IOCL3545    0.00%    failed      0.00%
+  30  IOCL3548    0.00%    failed      0.00%
+  31  IOCL3570    0.00%    failed      0.00%
+  32  IOCL3571    0.00%    failed      0.00%
+  33  IOCL3623    0.00%    passed     69.69%
+  34  IOCL3637    0.00%    failed      0.00%
+  35  IOCL3640    0.00%    failed      0.39%
+  36  IOCL3643    0.00%    passed     69.76%
+  37  IOCL3656    0.00%    passed      7.03%
+  38  IOCL3745    0.00%    failed      4.21%
+  39  LC1568      0.00%    failed      0.00%
+  40  LC1569      0.00%    failed      0.00%
+  41  LC1578      0.00%    failed      0.00%
+  42  LC1586      0.00%    failed      0.00%
+  43  LC2041      0.00%    failed      0.00%
+  44  LC2043      0.00%    failed      0.00%
+  45  LC2176      0.00%    failed      0.00%
+  46  LC2284      0.00%    failed      0.00%
+  47  LC2318      0.00%    failed      2.78%
+  48  LC2319      0.00%    failed      0.00%
+  49  LC2321      0.00%    failed      0.00%
+  50  LH825       0.00%    failed      0.00%
+  51  PER002      0.00%    failed      0.00%
+  52  PER010      0.00%    failed      0.00%
+  53  PER012      0.00%    failed      0.00%
+  54  PER014      0.00%    failed      0.00%
+  55  PER016      0.00%    failed      0.01%
+  56  PER065      0.00%    failed      0.00%
+  57  PER067      0.00%    failed      0.00%
+  58  PER069      0.00%    failed      0.00%
+  59  PER130      0.00%    failed      0.00%
+  60  PER186      0.00%    failed      1.35%
+  61  PER201      0.00%    failed      0.00%
+  62  PER207      0.00%    failed      0.00%
+  63  PER212      0.00%    failed      0.00%
+****  TOTAL       0.00%  49 sequences failed composition chi2 test (p-value<5%; df=3)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.813 seconds
+Generating 10000 samples for ultrafast bootstrap (seed: 42)...
+
+NOTE: 612 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -891159.327
+2. Current log-likelihood: -817907.821
+3. Current log-likelihood: -776140.720
+4. Current log-likelihood: -773397.701
+5. Current log-likelihood: -773167.646
+6. Current log-likelihood: -773150.439
+7. Current log-likelihood: -773149.111
+8. Current log-likelihood: -773149.004
+Optimal log-likelihood: -773148.942
+Rate parameters:  A-C: 1.02496  A-G: 5.41049  A-T: 0.99685  C-G: 0.39937  C-T: 5.41049  G-T: 1.00000
+Base frequencies:  A: 0.160  C: 0.338  G: 0.342  T: 0.160
+Site proportion and rates:  (0.968,0.446) (0.032,17.617)
+Parameters optimization took 8 rounds (10.219 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.111198 secs using 99.79% CPU
+Computing ML distances took 0.116981 sec (of wall-clock time) 0.115928 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.000170377 secs using 103.9% CPU
+Computing RapidNJ tree took 0.014264 sec (of wall-clock time) 0.014182 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -777015.300
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 81.171 second
+Computing log-likelihood of 98 initial trees ... 11.922 seconds
+Current best score: -773148.942
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -773005.286
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -771982.964
+Iteration 10 / LogL: -773159.277 / Time: 0h:4m:42s
+Iteration 20 / LogL: -773233.668 / Time: 0h:6m:55s
+Finish initializing candidate tree set (20)
+Current best tree score: -771982.964 / CPU time: 368.561
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -772056.111 / Time: 0h:7m:28s (0h:18m:30s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 40: -771935.341
+Iteration 40 / LogL: -771935.341 / Time: 0h:7m:56s (0h:20m:19s left)
+Iteration 50 / LogL: -772016.785 / Time: 0h:8m:38s (0h:15m:49s left)
+Log-likelihood cutoff on original alignment: -772308.867
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 57: -771913.706
+Iteration 60 / LogL: -771913.706 / Time: 0h:9m:12s (0h:15m:6s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 64: -771892.284
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 70: -771868.332
+Iteration 70 / LogL: -771868.332 / Time: 0h:9m:52s (0h:14m:17s left)
+Iteration 80 / LogL: -771914.945 / Time: 0h:10m:26s (0h:11m:52s left)
+Iteration 90 / LogL: -772282.571 / Time: 0h:10m:57s (0h:9m:49s left)
+Iteration 100 / LogL: -772067.099 / Time: 0h:11m:27s (0h:8m:5s left)
+Log-likelihood cutoff on original alignment: -772294.780
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.973
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 110 / LogL: -772330.051 / Time: 0h:12m:0s (0h:9m:53s left)
+Iteration 120 / LogL: -772026.278 / Time: 0h:12m:31s (0h:8m:24s left)
+Iteration 130 / LogL: -771947.380 / Time: 0h:13m:7s (0h:7m:6s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 135: -771834.743
+Iteration 140 / LogL: -772055.570 / Time: 0h:13m:45s (0h:9m:23s left)
+Estimate model parameters (epsilon = 0.100)
+UPDATE BEST LOG-LIKELIHOOD: -771830.665
+Iteration 150 / LogL: -771830.665 / Time: 0h:14m:28s (0h:8m:14s left)
+Log-likelihood cutoff on original alignment: -772294.780
+Iteration 160 / LogL: -772253.918 / Time: 0h:15m:5s (0h:7m:6s left)
+Iteration 170 / LogL: -771892.647 / Time: 0h:15m:42s (0h:6m:2s left)
+Iteration 180 / LogL: -771950.396 / Time: 0h:16m:17s (0h:5m:0s left)
+Iteration 190 / LogL: -771986.391 / Time: 0h:16m:52s (0h:4m:0s left)
+Iteration 200 / LogL: -771946.847 / Time: 0h:17m:29s (0h:3m:4s left)
+Log-likelihood cutoff on original alignment: -772294.780
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.984
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 210 / LogL: -771920.887 / Time: 0h:18m:8s (0h:7m:48s left)
+Iteration 220 / LogL: -781693.634 / Time: 0h:18m:34s (0h:6m:46s left)
+Iteration 230 / LogL: -771861.934 / Time: 0h:19m:9s (0h:5m:51s left)
+Iteration 240 / LogL: -780729.711 / Time: 0h:19m:40s (0h:4m:56s left)
+Iteration 250 / LogL: -772044.070 / Time: 0h:20m:15s (0h:4m:3s left)
+Log-likelihood cutoff on original alignment: -772294.780
+Iteration 260 / LogL: -772768.730 / Time: 0h:20m:48s (0h:3m:12s left)
+Iteration 270 / LogL: -772087.848 / Time: 0h:21m:31s (0h:2m:23s left)
+Iteration 280 / LogL: -771854.011 / Time: 0h:22m:15s (0h:1m:35s left)
+Iteration 290 / LogL: -771859.304 / Time: 0h:23m:1s (0h:0m:47s left)
+Iteration 300 / LogL: -771831.544 / Time: 0h:23m:41s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -772294.780
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.998
+TREE SEARCH COMPLETED AFTER 300 ITERATIONS / Time: 0h:23m:43s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -771830.665
+Optimal log-likelihood: -771830.661
+Rate parameters:  A-C: 1.02607  A-G: 5.42760  A-T: 1.00950  C-G: 0.39634  C-T: 5.42760  G-T: 1.00000
+Base frequencies:  A: 0.160  C: 0.338  G: 0.342  T: 0.160
+Site proportion and rates:  (0.968,0.450) (0.032,17.491)
+Parameters optimization took 1 rounds (0.569 sec)
+BEST SCORE FOUND : -771830.661
+Creating bootstrap support values...
+Split supports printed to NEXUS file /scratch/antwerpen/207/vsc20717/LRV_Leish_CoDiv/1_GenData/2_Leish/1_OW_NW/3_Gene_trees/1_input/Leish.Viannia.GENO.SNP.GATK.fGQ10.Q100.PASS.Noart.NoNA.vcf.gz.filtered.fa.splits.nex
+Total tree length: 0.840
+
+Total number of iterations: 300
+CPU time used for tree search: 1367.043 sec (0h:22m:47s)
+Wall-clock time used for tree search: 1376.222 sec (0h:22m:56s)
+Total CPU time used: 1415.748 sec (0h:23m:35s)
+Total wall-clock time used: 1425.256 sec (0h:23m:45s)
+
+Computing bootstrap consensus tree...
+Reading input file /scratch/antwerpen/207/vsc20717/LRV_Leish_CoDiv/1_GenData/2_Leish/1_OW_NW/3_Gene_trees/1_input/Leish.Viannia.GENO.SNP.GATK.fGQ10.Q100.PASS.Noart.NoNA.vcf.gz.filtered.fa.splits.nex...
+63 taxa and 368 splits.
+Consensus tree written to /scratch/antwerpen/207/vsc20717/LRV_Leish_CoDiv/1_GenData/2_Leish/1_OW_NW/3_Gene_trees/1_input/Leish.Viannia.GENO.SNP.GATK.fGQ10.Q100.PASS.Noart.NoNA.vcf.gz.filtered.fa.contree
+Reading input trees file /scratch/antwerpen/207/vsc20717/LRV_Leish_CoDiv/1_GenData/2_Leish/1_OW_NW/3_Gene_trees/1_input/Leish.Viannia.GENO.SNP.GATK.fGQ10.Q100.PASS.Noart.NoNA.vcf.gz.filtered.fa.contree
+Log-likelihood of consensus tree: -771830.783
+
+Analysis results written to: 
+  IQ-TREE report:                /scratch/antwerpen/207/vsc20717/LRV_Leish_CoDiv/1_GenData/2_Leish/1_OW_NW/3_Gene_trees/1_input/Leish.Viannia.GENO.SNP.GATK.fGQ10.Q100.PASS.Noart.NoNA.vcf.gz.filtered.fa.iqtree
+  Maximum-likelihood tree:       /scratch/antwerpen/207/vsc20717/LRV_Leish_CoDiv/1_GenData/2_Leish/1_OW_NW/3_Gene_trees/1_input/Leish.Viannia.GENO.SNP.GATK.fGQ10.Q100.PASS.Noart.NoNA.vcf.gz.filtered.fa.treefile
+  Likelihood distances:          /scratch/antwerpen/207/vsc20717/LRV_Leish_CoDiv/1_GenData/2_Leish/1_OW_NW/3_Gene_trees/1_input/Leish.Viannia.GENO.SNP.GATK.fGQ10.Q100.PASS.Noart.NoNA.vcf.gz.filtered.fa.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          /scratch/antwerpen/207/vsc20717/LRV_Leish_CoDiv/1_GenData/2_Leish/1_OW_NW/3_Gene_trees/1_input/Leish.Viannia.GENO.SNP.GATK.fGQ10.Q100.PASS.Noart.NoNA.vcf.gz.filtered.fa.splits.nex
+  Consensus tree:                /scratch/antwerpen/207/vsc20717/LRV_Leish_CoDiv/1_GenData/2_Leish/1_OW_NW/3_Gene_trees/1_input/Leish.Viannia.GENO.SNP.GATK.fGQ10.Q100.PASS.Noart.NoNA.vcf.gz.filtered.fa.contree
+  Screen log file:               /scratch/antwerpen/207/vsc20717/LRV_Leish_CoDiv/1_GenData/2_Leish/1_OW_NW/3_Gene_trees/1_input/Leish.Viannia.GENO.SNP.GATK.fGQ10.Q100.PASS.Noart.NoNA.vcf.gz.filtered.fa.log
+
+Date and Time: Fri Jul  4 10:51:30 2025
