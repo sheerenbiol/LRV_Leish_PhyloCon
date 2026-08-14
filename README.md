@@ -9,7 +9,7 @@ Seperate analyses were done for both LRV and *Leishmania* and subsequently a joi
 
 ### Overview of the repo:
 `$ tree -d .`
-`.
+```.
 ├── 1_LRV_analysis
 │   ├── 1_Reference_Mapping
 │   │   ├── 1_HPC_Scripts
@@ -75,7 +75,7 @@ Seperate analyses were done for both LRV and *Leishmania* and subsequently a joi
         │   └── 2_Lguyanensis
         └── 4_Cost_Distribution_plots
 
-65 directories, 249 files`
+65 directories, 249 files```
 
 ### Citation:
 > [!Note] Pre-print on bioRxiv:
