@@ -80,4 +80,4 @@ Seperate analyses were done for both LRV and *Leishmania* and subsequently a joi
 
 ### Citation:
 > **Pre-print on bioRxiv:** </br>
-> Heeren, S., Motta Cantanhêde, L., Chourabi, K., de Oliveira Santana, M. C., Klaps, J., Kostygov, A. Y., Yurchenko, V., Lemey, P., Dujardin, J.-C., Van den Broeck, F., & Cupolillo, E. (2025). (Genomic evidence for co-evolution and sporadic host shifts in leishmaniaviruses)[https://doi.org/10.1101/2025.11.20.685321]. *bioRxiv*.
+> Heeren, S., Motta Cantanhêde, L., Chourabi, K., de Oliveira Santana, M. C., Klaps, J., Kostygov, A. Y., Yurchenko, V., Lemey, P., Dujardin, J.-C., Van den Broeck, F., & Cupolillo, E. (2025). [Genomic evidence for co-evolution and sporadic host shifts in leishmaniaviruses](https://doi.org/10.1101/2025.11.20.685321). *bioRxiv*.
